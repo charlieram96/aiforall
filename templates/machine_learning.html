@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/machine_learning.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fixed.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+      
+
+    <title>ai for all</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-md justify-content-between fixed-top" style="background-color: rgba(41, 36, 36, 0.8);">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link pl-0" href="{{ url_for('index')}}" style="font-weight: 400;">Home <span class="sr-only">Home</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ url_for('scraper_page') }}">Web Scraper</a>
+                  <a class="dropdown-item" href="{{ url_for('ml_page') }}">Machine Learning</a>
+                  <a class="dropdown-item" href="{{ url_for('product_page') }}">Product</a>
+              </div>
+          </li>
+            <li class="nav-item" style="width: 100px;">
+              <a class="nav-link" href="https://artificial-intelligence.anvil.app" id="dd">Web App</a>
+            </li>
+            <li class="nav-item" style="width: 100px;">
+              <a class="nav-link" href="{{ url_for('guide') }}" id="dd">Guide</a>
+            </li>
+            
+  
+          </ul>
+        </div>
+        <a href="{{ url_for('index')}}" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"><img src="/static/images/logo.png" alt=""></a>
+        <div class="navbar-collapse collapse dual-nav w-50 order-2">
+          <ul class="nav navbar-nav ml-auto">
+            <div>
+              <a href="https://github.com/charlieram96/SeniorProject">
+                <span class="ml-auto navbar-text footer__logo1">GitHub</span>
+                <li class="nav-item" style="margin-top: 2px; margin-right: 1px;"><a class="nav-link" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github"></i></a></li>
+              </a>
+            </div>
+          </ul>
+        </div>
+      </div>
+      
+    </nav> 
+
+    <div id="videoplayer1">
+      <div class="video-wrap">
+        <div id="videos">
+          <!---<video id='bgvid' autoplay loop muted playsinline><source src='/static/videos/night_traffic.mp4' type='video/mp4'></video>--->
+        </div>
+
+      </div>
+    </div>
+
+    <div class="caption text-center" id="paragraph">
+      <div id="overlay">
+        <h2 class="display-4" id="header_ml">Machine Learning</h2>
+        <p class="lead" id="text_ml">Many people, when they hear terms such as <i>machine learning</i> or <i> ai</i>, are reminded of scenes from movies such as "I, Robot", where the setting is a futuristic society in which robots have become a ubiquitous and instrumental part of society. 
+        While the movie introduces very interesting concepts, to someone who is unfamiliar with ai or machine learning, its notion can be a bit misleading. Although it is clear the robots in the movie fall under the category of ai, to truly understand these terms and ideas we have to take a step back and start with a much more simple picture. What <i>is</i> learning in the first place? Is it really possible for machines to "learn"? What is involved in the process of teaching machines? While the field of machine learning and ai
+        is one that is truly massive and reaches way beyond the scope of what we are trying to achieve with this project, we believe <b>everyone</b>, regardless of their profession, can and <b>should</b> become familiar with and develop basic understanding of these terms and what technologies are behind them. As we enter this new industrial revolution of artificial intelligence, being prepared for the upcoming changes will allow you to be one step ahead. 
+        </p>
+          <a class="btn btn-outline-light btn-md" href="#sec1" id="button1">
+            Start learning
+          </a>
+      </div>
+    </div>
+
+    <section id="sec1">
+      <div class="par1">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1" id="center">
+              <img class="img-fluid rounded" src="https://media.giphy.com/media/kXBVtKjLxINji/giphy.gif" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1" id="ws">
+            <div class="p-5" style="padding-bottom: 10px !important;">
+              <h2 class="display-4" style="font-weight: 350;">Where do we begin?</h2>
+              <p>Now that we have been able to successfully gather our data using our custom web scraper, how do we proceed? <b>The process of machine learning</b> begins with this acquisition of data, and usually lots of it. Our web scraper allowed us to
+              acquire the data, but we are not yet ready to apply models and analyze it. Why not? <b>We must be sure this data is <i>clean</i></b>. What does it mean for data to be clean?</p>
+        <!---<a class="btn btn-outline-light btn-sm" href="{{ url_for('scraper_page') }}">Try it yourself</a>--->
+      </div>
+          </div>
+        </div>
+      </div>
+      <div id="s1p2">
+        <p style="padding-left: 63px; padding-right: 63px;">
+          For us humans, the idea of unclean data might seem a bit difficult to 
+          understand. If we are buying a product online and want to know the price, we would be able to understand it even if it was written in different ways: "$5", "5", "Five", etc. However, computers don't have this type of innate understanding. To them, "$5" is very different than "5". One of these reasons is that computers read information in <i>types</i>. Usually, these data types must be not only specified, but also uniform for a computer to understand them (To learn more about data types, what they are, and why they're important, visit <a href="https://techterms.com/definition/datatype">this</a> webpage). <br><br>
+          Imagine you build a web scraper to collect images of french bulldog puppies and set it up so that it collects 1000 such images. While the majority of the images a well built web scraper returns will be of french bulldog puppies, some of the images it returns might be of other breeds or of french bulldogs that aren't puppies. Basically, some of the data will be irregular or irrelevant. If we disregard these irregularities and feed this data into our machine learning models to train it, the accuracy of the results will be skewed. In essence, our ai will lose "intelligence"; it will learn to less accurately spot a french bulldog puppy. 
+          This phenomenon may be easier to understand if we think of what it is like to teach a young child. If, from a young age, a child is taught by their parents that a "square" is an object with three angles, the child, not knowing any better, will grow up with the knowledge that a square is an object with three angles. Once the child grows and starts school, the accuracy of their knowledge will be tested. If the child is asked by the teacher to identify an object with three angles, they will incorrecly label it a "square". <br><br>The same happens with ai. Like a young child, it knows no information of the world and must be taught. 
+          This process of learning involves <b>training</b> and <b>testing</b>. We <i>train</i> ai by feeding it data and revealing to it the value of that data, much like how we would train a young child to identify a shape by showing it a shape and labeling it for them. We then <i>test</i> our ai by finding out the accuracy with which it executes its intended funcion, much like how we would test a child by asking them to identify a shape. This process of training and testing is repeated until we are satisfied with the accuracy of our ai. <br><br> Going back to our puppy image scraper example, had we had taken the time to remove (clean) the irrelevant and inaccurate 
+          images once the web scraper collected them, we could have <b>trained</b> our ai to be accurate, useful, and very valuable. <b>The proccess of the data cleaning, therefore, is crucial</b>. <br><br>
+          When we collected raw data from Amazon, we stored it in a file. The contents of a few of those files were available for you to see in our previous page. Is the data displayed in those files clean? No. The data in those files, while very understandable for a human, is not clean. How, then, would a clean data file look like? Let's take one of our already scraped files, use some data cleaning tools already built into <a href="https://www.python.org/doc/essays/blurb/">Python</a> (The programming language our web scraper is built with), and show what a clean data file would look like. To begin, take a look at the following image and notice the values of the data fields. Would you consider them clean?
+
+          
+        </p>
+      </div>
+        <img id="pic1" src="/static/images/scraper_images/unclean.png">
+    
+
+      <div id="s1p2">
+        <p style="padding-left: 63px; padding-right: 63px;">
+          The answer to the question is <b>no</b>, the data above cannot be considered clean. For <i>two</i> reasons: 1) most attributes have symbols (#, $, %) that don't allow for proper types and 2) the attributes with these symbols aren't in their proper types. You might think removing the symbols will solve the problem and you'd be somewhat correct, on the right track. However, there are two steps we have to take to properly clean this data: 1) remove the symbols, and 2) <a href="https://www.w3schools.com/python/python_casting.asp">type cast</a> the <a href="https://www.w3schools.com/python/python_datatypes.asp">types</a> we want the attributes to have. <br><br>The data we are working with requires a relatively simple process to clean. To remove the symbols, 
+          Pyhon has various <a href="https://www.w3schools.com/python/python_functions.asp">functions</a> we can use, such as the .strip() function, that removes unwanted characters. Check out a snippet of our code that not only makes use of this function to remove the percentage sign from our "5_Stars" attribute, but also type casts the result to an integer (the desired data type for this attribute).
+        </p> 
+      </div>
+      
+       
+          <img id="pic1" src="/static/images/scraper_images/removing.png">
+        
+
+        <div id="s1p2">
+          <p style="padding-left: 63px; padding-right: 63px;">
+            In line 200, we used techniques previously discussed in the "web scraper" page to extract our "percent 5 star" attribute. After line 200, our attribute will return something like: "87%" with type "String". This is what you saw in the image of the table above; unclean data. Lines 201 and 202 remedy this. In line 201, we take our attribute and strip it of the "%" symbol. However, we want it to be of type "Integer", or "int", and it is currently type "String". Line 202 solves this issue with a simple "int" cast. <br><br>
+            This process is repeated for a lot of the remaining attributes: "4_Stars", "3_Stars", "2_Stars", and "1_Star". Other attributes, such as the "Rating" attribute, use a similar process. For this attribute, we have to remove the words "out of 5 stars", keeping only the information we want, and type cast it to a "float" (a decimal). To remove "out of 5 stars", we make use of another one of Python's useful functions, .split(). This function splits a string by a specified separator. If no separator is specified, as in our case, it will use any whitespace as the separator. Check out the code below. 
+          </p> 
+        </div>
+        <img id="pic1" src="/static/images/scraper_images/rating.png">
+
+        <div id="s1p2">
+          <p style="padding-left: 63px; padding-right: 63px;">
+            Similar to the "percent 5 star" attribute, the first line of code, line 183, extracts the data from the Amazon product page. The following lines clean the data. Line 184 applies the .split function to isolate the only information we are interested in and line 185 collects the item from the returned list. The list will roughly look like this: ["4.4", out", "of", "5", "stars"]. Index 0 has "4.4", index 1 has "out", and so on. The code in line 185 exists because the only information we are interested in is in index 0. Line 186 casts the data to a float, the type we need for this specific data. 
+            If you want to check out the rest of the code used to clean the remaining attributes, feel free to check our our <a href="https://github.com/charlieram96/seniorproject_web_scraper">Github repository</a>. <br><br>Now that you have a better understanding of what the data cleaning process looks like, take a look at the same table as above, now occupied with data that has been cleaned. Since you cannot see the data types of the attributes, this information has been provided on the first row of items. Each column has uniform data types.
+          </p> 
+        </div>
+        <img id="pic1" src="/static/images/scraper_images/clean.png">
+    
+        <div id="s1p2">
+          <p id="s1p2" style="padding-left: 63px; padding-right: 63px;">
+            This concludes our analysis of the data cleaning process. Now that our data is clean, we can move onto machine learning. We have already covered <i>how</i> machines learn (the process of training and testing). In the following sections we will expand on the concepts already discussed and show some of the useful machine learning models that will allow us to analyze our data, find useful patterns, and extract valuable information. The next section will go into more detail about what machine learning actually is.  
+          </p> 
+        </div>
+    </section>
+
+    <section>
+      <div class="par1">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <img class="img-fluid rounded" src="https://media.giphy.com/media/6nEVfPoj4sadO/giphy.gif" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5" style="color: rgb(39, 39, 39);">
+              <h2 class="display-4" style="font-weight: 350;">What is machine learning?</h2>
+              <p>The way machines learn, as we have already commented on, is closely related to the way humans learn. The key element is <i>repetition</i>. It all begins with data and the use of this data to find patterns and make predictions. Through the repetitious process of training and testing, the algorithm learns to modify itself and become more accurate. This process has a reason and a <b>goal:</b> To allow the computer to learn <i>automatically</i> without human intervention. <br><br> Machine learning is a very broad field that requires a lot of time and effort for one to fully grasp. However, by breaking up the concepts into smaller parts and using universal terms we will be able to grasp the key ideas. To begin, we define the 3 main types of machine learning algorithms: <b>supervised learning</b>, 
+                <b>unsupervised learning</b>, and <b>reinforcement learning.</b> </p>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <div id="s1p2">
+        <p style="padding-left: 63px; padding-right: 63px;">
+        <b>Supervised learning - </b>The most common type of machine learning algorithm. This algorithm is used for a variety of tasks such as identifying faces in images, language translation, and product recommendations. In supervised learning, we give the machine an input (think of it as question) and the correct response (the answer). We call it "supervised" learning because of the nature of the learning process. Think of the machine learning algorithm as the student and us as the teacher. In the beginning, the student doesn't know anything about how to arrive at the proper conclusion so it just guesses at the answer. We then tell it the correct answer, how accurate is was, and the process repeats. Eventually, given we feed the algorithm enough quality data, it will begin to improve in the accuracy of its answers. 
+        <br><br><b>Unsupervised learning - </b>In unsupervised learning, we feed data into the model and ask it to make sense of the structure. The algorithm will do this by identifying patterns in the data and finding similarities that allow for the data to be split into categories (usually done through a process known as <a href="https://www.geeksforgeeks.org/clustering-in-machine-learning/">clustering</a>). The algorithm isn't designed to single out specific types of data, it will simply look for data that can be grouped by its similarities, or for outliers that stand out. An example of where unsupervised learing can be useful: An advertising platform segments the U.S. population into smaller groups with similar demographics and purchasing habits so that advertisers can reach their target market with relevant ads. <br><br>
+        <b>Reinforcement learning - </b>Reinforcement learning involves giving the algorithm a reward based on whether it has done the desired action or not. The algorithm is designed to maximize the rewards it receives and will, with time and repetition, learn the ideal actions it must execute to receive the largest reward posible. Think of the way a dog is trained to sit; we reward it with a treat when it performs the desired action. With time, the dog will learn that if it sits when we ask it to, it will be rewarded.<br><br> 
+        That concludes our overview of machine learning. In the following section we will discuss the practical applications of machine learning, specifically what models we can use to help us visualize our data and analyze it through novel perspectives. </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="par1">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <img class="img-fluid rounded" src="/static/images/dataVis.gif" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5" style="color: rgb(39, 39, 39);">
+              <h2 class="display-4" style="font-weight: 350;">Visualizing data</h2>
+              <p>The fact of the matter is that data is changing the face of our world. From helping cure diseases to boosting a company's revenue, data is allowing our world to grow. For businesses, harnessing data can facilitate the finding of new cutomers, track social media interaction with the brand, improve customer retention rate, capture market trends, predict sales trends, and much more. In other words, for businesses, <b>data is essential</b>. However, it is not the acquisition or availability of data that allows businesses to profit from it. Instead, it is the way data is <i>analyzed</i> that gives businesses the oportunity to grow. The question, therefore, is simple... How can we analyze the data we acquire in a way that allows us to benefit the most from it?</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <div id="s1p2">
+        <p style="padding-left: 63px; padding-right: 63px;">
+           While there are a multitude of conventional ways to analyze data, our mission to benefit from powerful machine learning models to analyze our data. Although we will also be using other visual models that we find practical for our particular dataset, the machine learning aspect will be our main goal. After all, it is this machine learning aspect that will allow our product to be scaled in such a way that it can serve as a unseful tool for a wider variety of businesses. 
+           <br><br>To begin with, let's import one of our scraped datasets and use some visual models to find useful patterns. 
+           <br><br><b>Use the following dropdown to select the model you want to view</b>. We encourage you to analyze each model and find interesting patterns within our data. Each model will be accompanied by a few words to describe it and offer brief insight. Feel free to review <a href="#">this (create link to dataset in github)</a> link which contains the raw dataset from which the models are based on. The data is very similar to the datasets available in the previous page. However, we have included some additional attributes.
+        </p>
+      </div>
+      
+    </section>
+
+    <div class="form" style="padding-top: 60px; padding-bottom: 30px; display: block; text-align: center; background-color: rgb(255, 255, 255);">
+      <form class="form-inline md-form mr-auto mb-4" id="form1" action="" method="POST" enctype="multipart/form-data" style="padding-left: 2rem; padding-right: 2rem; display: inline-block; margin-left: -25%; text-align: left;">
+        <div class = select-box>  
+          <select id="mySelect" name = "models" style="padding: .2rem; font-size: .93rem ;width: 200px; border: 0 none; height: 40px; background: #adadad; color: #ffffff;">
+            <option value="Blank">Select...</option> 
+            <option value="heatmap">Heatmap</option>
+            <option value="scatter_1">Positive Correlation Scatterplot</option>
+            <option value="joint_1">Positive Correlation Jointplot</option>
+            <option value="scatter_2">Negative Correlation Scatterplot</option>
+            <option value="joint_2">Negative Correlation Jointplot</option>
+            <option value="scatter_3">No Correlation Scatterplot</option>
+            <option value="joint_3">No Correlation Jointplot</option>
+            <option value="pie">Pie Chart</option>
+          </select>
+          <button class="btn btn-dark btn-sm" type="submit" value="Submit" style="color: rgb(255, 255, 255) ; height: 40px; width: 100px ; margin-left: 15px; position: absolute;">Submit</button>
+        </div>
+          <!---<input type="submit" value="Submit">--->
+      </form>
+    </div>
+
+    <div id="scrollDown" style="padding-bottom: 70px;">
+      {% if scroll %}
+      <script>
+          //document.getElementById('{{ scroll }}').scrollIntoView();
+          document.location.hash = '#' + '{{ scroll }}';
+      </script>
+      </script>
+      {% endif %}
+    </div>
+
+    <section>
+        <div id="s1p2">
+          {% if mode == 'heatmap' %}
+          <h2 style="padding-left: 63px;">Heatmap</h2>
+          <p style="padding-left: 63px; padding-right: 63px;">The following model is a correlation <i>heatmap</i>. The correlations range from -1.0 to 1.0. A lighter colored square with a relatively high correlation value signifies a strong positive correlation between two attributes. This means that as the value of one attribute increases, the value of the other attribute also increases. Similarly, as the value of one attribute decreases, the value of the other attribute also decreases. For example, you will note that as a product received a higher number of five star reviews, its rating increased. Darker colors, on the other hand, signify that there is a <b>negative</b> correlation between attributes; as one value increases, the other decreases. Please note that only attributes with numeric values were included in the figure.</p>
+          {% elif mode == 'scatter_1' %}
+          <h2 style="padding-left: 63px;">Positive Correlation (Scatterplot)</h2>
+          <p style="padding-left: 63px; padding-right: 63px;">The following model is a scatterplot with an x-axis variable of "percent 5 stars" and a y-axis variable of "rating". Each dot on the graph represents a row (a product) on the dataset. Additional information displayed on the graph includes color hue of dots indicating range of answered questions and size of dots indicating range of rating counts. This type of graph helps us spot clusters and correlations within our data. Spotting correlations, however, is easier and more accurate on a <i>Jointplot</i>.  </p>
+          {% elif mode == 'scatter_2' %}
+          <h2 style="padding-left: 63px;">Negative Correlation (Scatterplot)</h2>
+          <p style="padding-left: 63px; padding-right: 63px;">The following model is a scatterplot with an x-axis variable of "percent 1 star" and a y-axis variable of "rating". Each dot on the graph represents a row (a product) on the dataset. Additional information displayed on the graph includes color hue of dots indicating range of answered questions and size of dots indicating range of rating counts. This type of graph helps us spot clusters and correlations within our data. Spotting correlations, however, is easier and more accurate on a <i>Jointplot</i>.</p>
+          {% elif mode == 'scatter_3' %}
+          <h2 style="padding-left: 63px;">No Correlation (Scatterplot)</h2>
+          <p style="padding-left: 63px; padding-right: 63px;">The following model is a scatterplot with an x-axis variable of "days since first listed" and a y-axis variable of "rating". Each dot on the graph represents a row (a product) on the dataset. Additional information displayed on the graph includes color hue of dots indicating range of answered questions and size of dots indicating range of rating counts. This type of graph helps us spot clusters and correlations within our data. You'll notice this graph shows very low correlation between these two variables.</p>
+          {% elif mode == 'joint_1' %}
+          <h2 style="padding-left: 63px;">Positive Correlation (Jointplot)</h2>
+          <p style="padding-left: 63px; padding-right: 63px;">The following model is a jointplot with an x-axis variable of "percent 5 stars" and a y-axis variable of "rating". This graph, unlike our scatterplot, gives us a regression line which allows us to easily spot relationships between the two variables. We can clearly see a positive correlation here. Additionally, the graph shows the volume of data at each value on the respective axis.</p>
+          {% elif mode == 'joint_2' %}
+          <h2 style="padding-left: 63px;">Negative Correlation (Jointplot)</h2>
+          <p style="padding-left: 63px; padding-right: 63px;">The following model is a jointplot with an x-axis variable of "percent 1 star" and a y-axis variable of "rating". This graph, unlike our scatterplot, gives us a regression line which allows us to easily spot relationships between the two variables. We can clearly see a negative correlation here. Additionally, the graph shows the volume of data at each value on the respective axis.</p>
+          {% elif mode == 'joint_3' %}
+          <h2 style="padding-left: 63px;">No Correlation (Jointplot)</h2>
+          <p style="padding-left: 63px; padding-right: 63px;">The following model is a jointplot with an x-axis variable of "days since first listed" and a y-axis variable of "rating". This graph, unlike our scatterplot, gives us a regression line which allows us to easily spot relationships between the two variables. With these particular variables, no clear correlation is visible. While there is a slight negative correlation, it is not high enough to warrant the conclusion that a clear relationship exists between these two variables. Additionally, the graph shows the volume of data at each value on the respective axis.</p>
+          {% elif mode == 'pie' %}
+          <h2 style="padding-left: 63px;">Pie Chart</h2>
+          <p style="padding-left: 63px; padding-right: 63px;">A pie chart diviedes a circle into sections and allows us see the percentage of each section in reltion to the whole. For this pie chart, we decided to show the percentages of stars a particular product received. While this type of chart isn't extremely useful in representing data for analysis, it gives us a clearer picure of our data.</p>
+          {% endif %}
+        </div>
+    </section>
+
+    <div id="ml_pics">
+      <img src="{{mod}}" height="auto" width="100%" style="text-align: center;">
+    </div>
+
+    <div id="s1p2" style="padding-bottom: 60px;">
+      <p style="padding-left: 63px; padding-right: 63px;">
+        While the models we used on our dataset allowed us to analyze <i>our</i> particular dataset effectively, the reality is that in subsequent projects we may have to scrape data that is of a wide variety of <b>types</b> and <b>sizes</b>. What are the different models we have available to us if we want to visualize data? To help give you insight into the wide variety of 
+        data visualization models available, we have provided a window view of <a href="https://seaborn.pydata.org/examples/index.html">this</a> page. While the data the following models represent is not our own, our purpose for pointing you towards those models is to help you understand the different ways data can be visualized and give you an idea of what models you may find relevant for your own projects.
+      </p>
+    </div>
+
+    <iframe style="margin-left: 10%; width: 80%; height: 500px; border-radius: 10px;" src="https://seaborn.pydata.org/examples/index.html"></iframe>
+
+    <div id="s1p2" style="padding-top: 50px; padding-bottom: 70px;">
+      <p style="padding-left: 63px; padding-right: 63px;">
+        <br>This concludes the section on machine learning and visual representations of data. Since the purpose of this website is primarily to <i>inform</i>, we wanted to provide enough information for basic understanding of the tools we used in the project. To further these concepts, we have developed a web app and encourage you to visit it once you feel comfortable with the concepts described on this page. This web app is the focus of the next page. <br>  
+        <a class="btn btn-outline-dark btn-sm" href="{{ url_for('product_page') }}" style="margin-top: 15px;">Continue</a>
+      </p>
+    </div>
+
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/video_background.js') }}"></script>
+    <script src="https://use.fontawesome.com/ca32748111.js"></script>
+    
+
+  </body>
+
+  <footer class="footer" style="padding-top: 45px;">
+    <div class="row" style="text-align: center;">
+      <div class="col-xs-7 col-md-5 footer__addr" id="col1">
+          <h1 class="footer__logo" style="color: #2f2f2f; text-align: center; padding-bottom: 20px;">ai for all</h1>
+    
+            <ul class="social-icons" style="height: 44px; display: inline-block; text-align: center;">
+              <li id="leftIcon"><a title="Check our our GitHub" class="github" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+              <li><a title="Email us" class="email-us" href="mailto:crami097@fiu.edu"><i class="fa fa-envelope" style="font-size: 22px; padding-top: 11px;"></i></a></li>
+              <li><a title="Visit the GenAi website" class="GenAi" href="https://www.ainexus.org/home"><i class="fas fa-brain" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+            </ul>
+        </div>
+      <div class="col-sm-9">
+        <h3 style="font-size: 24px; text-align: left;">About</h3>
+         <p class="font1">We are a dedicated team of developers who have a passion for machine learning and technologies of the future. Our goal is to help others in their quest for improvement by proving that <b>anyone</b> can learn technologies that at one point they deemed impossible to understand. We hope you join us on this journey and learn a few things along the way.</p>
+      </div>
+  
+    </div>
+    
+      <hr>
+  
+    <div class="legal">
+      <p style="text-align: left;">A project associated with <a href="https://www.mitre.org/" style="color: #999;"><b>MITRE</b></a> and <a href="https://www.ainexus.org/home" style="color: #999;"><b>Genereration AI</b></a> </p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> by the <span class="footer__logo" style="font-size: 14px;">ai for all </span> team</span>
+      </div>
+    </div>
+  </footer>
+    
+</html>

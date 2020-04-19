@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ai for all</title>
+<link rel = "icon" href = "/static/images/logo1.png" type = "image/x-icon"> 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/guide.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-dark navbar-expand-md justify-content-between fixed-top" style="background-color: rgba(41, 36, 36, 0.8);">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link pl-0" href="{{ url_for('index')}}" style="font-weight: 400;">Home <span class="sr-only">Home</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pages
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ url_for('scraper_page') }}">Web Scraper</a>
+                <a class="dropdown-item" href="{{ url_for('ml_page') }}">Machine Learning</a>
+                <a class="dropdown-item" href="{{ url_for('product_page') }}">Product</a>
+            </div>
+        </li>
+          <li class="nav-item" style="width: 100px;">
+            <a class="nav-link" href="https://artificial-intelligence.anvil.app" id="dd">Web App</a>
+          </li>
+          <li class="nav-item" style="width: 100px;">
+            <a class="nav-link" href="{{ url_for('guide') }}" id="dd">Guide</a>
+          </li>
+          
+
+        </ul>
+      </div>
+      <a href="{{ url_for('index')}}" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"><img src="/static/images/logo.png" alt=""></a>
+      <div class="navbar-collapse collapse dual-nav w-50 order-2">
+        <ul class="nav navbar-nav ml-auto">
+          <div>
+              <a href="https://github.com/charlieram96/SeniorProject">
+                <span class="ml-auto navbar-text footer__logo1">GitHub</span>
+                <li class="nav-item" style="margin-top: 2px; margin-right: 1px;"><a class="nav-link" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github"></i></a></li>
+              </a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    
+  </nav>
+
+<h2 class="display-1" style="font-size: 34px ; text-align: center; margin-bottom: 20px; margin-top: 105px; padding-left: 30px; padding-right: 30px;">
+  A <span class="footer__logo" style="font-size: 38px;">guide</span> for expanding your knowledge
+</h2>
+
+<div id="s1p2">
+  <p class="" style="padding-left: 63px; padding-right: 63px; text-align: justify;">
+    The purpose of this guide is to serve as the next step if you wish to continue to learn about the technologies used in this project. We will be providing sources you can use to further your 
+    knowledge on web scraping and machine learning. However, our primary focus will be on the enormous field of artificial intelligence and it's subsets of machine learning and deep learning, the latter currently being 
+    the primary focus of data scientists and researchers in the field. 
+    <br><br>
+    The first references will be about web scraping. We recommend you take a look at these if you wish to implement web scraping into your own project or simply want to know more about the process. 
+    Following that will be references for expanding your knowledge on <i>shallow</i> machine learning, the type of machine learning we used in this project. However, we will also be giving referenced 
+    for <i>deep learning</i>, an incredibly interesting yet more difficult subfield of machine learning.
+  </p>
+</div>
+
+<div class="row" id="row1" style="padding-left: 80px; padding-bottom: 100px; padding-top: 50px;" >
+  <div class="col">  
+    <h3 style="margin-bottom: 10px;">
+      <span class="footer__logo" style="font-size: 30px;">Web Scraping</span> 
+    </h3>
+    <ul class="fa-ul" id="guide1">
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-fingerprint" style="margin-right: 5px;"></i></span> Frameworks/Libraries
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://scrapy.org/">Scrapy</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.octoparse.com/">Octoparse</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://mechanicalsoup.readthedocs.io/en/stable/">Mechanical Soup</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="http://docs.pyspider.org/en/latest/">PySpider</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://portia.readthedocs.io/en/latest/getting-started.html">Portia</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; margin-bottom: 10px;"></i><a href="https://www.selenium.dev/">Selenium</a></li>
+      </ul>
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-spider" style="margin-right: 5px;"></i></span> Web Crawlers/Spiders
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.cloudflare.com/learning/bots/what-is-a-web-crawler/">What are they?</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; margin-bottom: 10px;"></i><a href="https://www.octoparse.com/blog/how-to-build-a-web-crawler-from-scratch-a-guide-for-beginners">How are they built?</a></li>
+      </ul>
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-code" style="margin-right: 5px;"></i></span> CSS/XPath Selectors
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://docs.scrapy.org/en/latest/topics/selectors.html">In web scraping</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.w3schools.com/css/css_selectors.asp">CSS Selectors</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; margin-bottom: 10px;"></i><a href="https://www.w3schools.com/xml/xpath_syntax.asp">XPath Selectors</a></li>
+      </ul>
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-bath" style="margin-right: 5px;"></i></span> Data Cleaning
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.sisense.com/glossary/data-cleaning/">What it implies</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.aithority.com/guest-authors/the-significance-of-data-cleansing-in-big-data/">Why it's important</a></li>
+      </ul>
+    </ul>
+  </div>
+  <div class="col">  
+    <h3 style="margin-bottom: 10px;">
+      <span class="footer__logo" style="font-size: 30px;">Machine Learning</span> 
+    </h3>
+    <ul class="fa-ul" id="guide1">
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-book-open" style="margin-right: 5px;"></i></span> Definitions
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.technologyreview.com/2018/11/17/103781/what-is-machine-learning-we-drew-you-another-flowchart/">What is machine learning?</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.sciencedirect.com/topics/computer-science/supervised-learning">Supervised Learning</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://towardsdatascience.com/unsupervised-learning-and-data-clustering-eeecb78b422a">Unsupervised Learning</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://www.geeksforgeeks.org/what-is-reinforcement-learning/">Reinforcement Learning</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; margin-bottom: 10px;"></i><a href="https://www.simplilearn.com/importance-of-machine-learning-for-data-scientists-article">Importance of machine learning</a></li>
+      </ul>
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-code-branch" style="margin-right: 5px;"></i></span> Commonly used algorithms
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://towardsdatascience.com/linear-regression-detailed-view-ea73175f6e86">Linear regression</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc">Logistic regression</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; "></i><a href="https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052">Decision trees</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://machinelearningmastery.com/naive-bayes-for-machine-learning/">Naive bayes</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a">K-means</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; margin-bottom: 10px;"></i><a href="https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/">Other algorithms</a></li>
+      </ul>
+    </ul>
+  </div>
+  <div class="col">  
+    <h3 style="margin-bottom: 10px;">
+      <span class="footer__logo" style="font-size: 30px;">Deep Learning</span> 
+    </h3>
+    <ul class="fa-ul" id="guide1">
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-book" style="margin-right: 5px;"></i></span> Definitions
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://machinelearningmastery.com/what-is-deep-learning/">What is deep learning?</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://quantdare.com/what-is-the-difference-between-deep-learning-and-machine-learning/">How does it compare to shallow learning?</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; margin-bottom: 10px;"></i><a href="https://medium.com/breathe-publication/top-15-deep-learning-applications-that-will-rule-the-world-in-2018-and-beyond-7c6130c43b01">Applications</a></li>
+      </ul>
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-chart-bar" style="margin-right: 5px;"></i></span> Methods/Models
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="http://news.mit.edu/2017/explained-neural-networks-deep-learning-0414">What are neural networks?</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/">Convolutional Neural Networks</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://towardsdatascience.com/introduction-to-artificial-neural-networks-ann-1aea15775ef9">Artificial Neural Networks</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://towardsdatascience.com/recurrent-neural-networks-d4642c9bc7ce">Recurrent Neural Networks</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; margin-bottom: 10px;"></i><a href="https://towardsdatascience.com/classical-neural-network-what-really-are-nodes-and-layers-ec51c6122e09">Classic Neural Networks</a></li>
+      </ul>
+      <span class="fa-ul" style="margin-left: 0px;"><i class="fas fa-calendar" style="margin-right: 5px;"></i></span> Relevance
+      <ul class="fa-ul">
+        <li><i class="fas fa-angle-right" style="margin-right: 8px;"></i><a href="https://interestingengineering.com/what-is-deep-learning-and-why-is-it-more-relevant-than-ever">How is it relevant?</a></li>
+        <li><i class="fas fa-angle-right" style="margin-right: 8px; margin-bottom: 10px;"></i><a href="https://intellipaat.com/blog/importance-of-deep-learning-and-its-implications/">Implications  of deep learning</a></li>
+      </ul>
+    </ul>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="https://use.fontawesome.com/ca32748111.js"></script>
+
+</body>
+
+<footer class="footer" style="padding-top: 45px;">
+  <div class="row" style="text-align: center;">
+    <div class="col-xs-7 col-md-5 footer__addr" id="col1">
+        <h1 class="footer__logo" style="color: #2f2f2f; text-align: center; padding-bottom: 20px;">ai for all</h1>
+  
+          <ul class="social-icons" style="height: 44px; display: inline-block; text-align: center;">
+            <li id="leftIcon"><a title="Check our our GitHub" class="github" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+            <li><a title="Email us" class="email-us" href="mailto:crami097@fiu.edu"><i class="fa fa-envelope" style="font-size: 22px; padding-top: 11px;"></i></a></li>
+            <li><a title="Visit the GenAi website" class="GenAi" href="https://www.ainexus.org/home"><i class="fas fa-brain" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+          </ul>
+      </div>
+    <div class="col-sm-9">
+      <h3 style="font-size: 24px; text-align: left;">About</h3>
+      <p class="font1">We are a dedicated team of developers who have a passion for machine learning and technologies of the future. Our goal is to help others in their quest for improvement by proving that <b>anyone</b> can learn technologies that at one point they deemed impossible to understand. We hope you join us on this journey and learn a few things along the way.</p>
+    </div>
+
+  </div>
+  
+    <hr>
+
+  <div class="legal">
+    <p>A project associated with <a href="https://www.mitre.org/" style="color: #999;"><b>MITRE</b></a> and <a href="https://www.ainexus.org/home" style="color: #999;"><b>Genereration AI</b></a> </p>
+    
+    <div class="legal__links">
+      <span>Made with <span class="heart">♥</span> by the <span class="footer__logo" style="font-size: 14px;">ai for all </span> team</span>
+    </div>
+  </div>
+</footer>
+</html> 

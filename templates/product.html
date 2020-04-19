@@ -1,0 +1,185 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/product.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fixed.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+
+    
+
+    <title>ai for all</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-md justify-content-between fixed-top" style="background-color: rgba(41, 36, 36, 0.8);">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link pl-0" href="{{ url_for('index')}}" style="font-weight: 400;">Home <span class="sr-only">Home</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ url_for('scraper_page') }}">Web Scraper</a>
+                  <a class="dropdown-item" href="{{ url_for('ml_page') }}">Machine Learning</a>
+                  <a class="dropdown-item" href="{{ url_for('product_page') }}">Product</a>
+              </div>
+          </li>
+            <li class="nav-item" style="width: 100px;">
+              <a class="nav-link" href="https://artificial-intelligence.anvil.app" id="dd">Web App</a>
+            </li>
+            <li class="nav-item" style="width: 100px;">
+              <a class="nav-link" href="{{ url_for('guide') }}" id="dd">Guide</a>
+            </li>
+            
+  
+          </ul>
+        </div>
+        <a href="{{ url_for('index')}}" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"><img src="/static/images/logo.png" alt=""></a>
+        <div class="navbar-collapse collapse dual-nav w-50 order-2">
+          <ul class="nav navbar-nav ml-auto">
+            <div>
+              <a href="https://github.com/charlieram96/SeniorProject">
+                <span class="ml-auto navbar-text footer__logo1">GitHub</span>
+                <li class="nav-item" style="margin-top: 2px; margin-right: 1px;"><a class="nav-link" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github"></i></a></li>
+              </a>
+            </div>
+          </ul>
+        </div>
+      </div>
+      
+    </nav>
+   
+    <div id="videoplayer1">
+      <div class="video-wrap">
+        <div id="videos">
+          <!---<video id='bgvid' autoplay loop muted playsinline><source src='/static/videos/night_traffic.mp4' type='video/mp4'></video>--->
+        </div>
+
+      </div>
+    </div>
+
+    <div class="caption text-center" id="paragraph" style="color: white ; padding-bottom: 65px;">
+    <h2 class="display-4" id="header_ws" style="text-align: center; padding-top: 70px;">A Product</h2>
+    <p class="lead" id="text_ws" style="text-align: center; padding-left: 9%; padding-right: 9%; padding-top: 10px; padding-bottom: 20px ; margin: 0px;">
+    The process of collecting data and preparing it for analysis is one that will, for many projects, appear to be lengthy and tedious. We hope, however, that we have been able to make this process a bit easier to understand and that if needed, you will be able to make good use of the tools we have developed. The following section will offer a minimized window containing our <b>web app</b> and a few words to describe how it works and how it can benefit your current (or future) project.
+    </p>
+      <a class="btn btn-outline-light btn-md" href="#sec1" id="button2">
+        Continue
+      </a>
+    </div>
+
+    <section id="sec1">
+      <div class="par1">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-2" id="center">
+              <img class="img-fluid rounded" id="gif1" src="https://media.giphy.com/media/hgvpNO4yc7GBq/giphy.gif">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1" id="ws">
+            <div class="p-5" style="padding-bottom: 10px !important;">
+              <h2 class="display-4" style="font-weight: 350;">A Web App</h2>
+              <p>The purpose of this website is to give users insight into our project. Our primary aim is to help you understand the concepts behind seemingly difficult technologies that make use of ideas such as machine learning. However, we 
+                also wanted to bring to life a product that would benefit others. To this end, we developed a web scraper that allows us to collect information from the internet as well as tools that help us analyze this information and find 
+                patterns behind it. In the previous page, we showed you how some of those tools look and how they could benefit us. However, those were static representations that only applied to one dataset. We want our web scraper and analytical tools to apply to 
+                <b>all</b> possible datasets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="s1p2">
+        <p style="padding-left: 63px; padding-right: 63px;">
+          To make this a reality, we have developed a web application that will allow our tools to be <i>dynamic</i>. We encourage you to visit this web app yourself and be able to benefit from it. If there is something you find that is difficult to understand, please return here and use this site (or one of the referenced many sites) as a guide. 
+          What follows is a minimized window of the web app that you can use to play around with.
+        </p>
+      </div>
+      
+    </section>
+
+    <div style="width: 100%;">  
+      <iframe style="border-radius: 10px;" id="iframe1" data-anvil-embed src="https://artificial-intelligence.anvil.app"></iframe>
+    </div>
+
+    <section id="sec1">
+      <div class="par1">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-2" id="center">
+              <img class="img-fluid rounded" id="gif1" src="https://media.giphy.com/media/26gR0VKRgr1yIsJEY/giphy.gif">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-2" id="ws">
+            <div class="p-5" style="padding-bottom: 10px !important;">
+              <h2 class="display-4" style="font-weight: 350;">What's Next?</h2>
+              <p>In essence, this project is simply one big idea: <b>Everyone can and should understand artificial intellignce (ai) and machine learning</b>. We sincerely hope you have been able to benefit from this project and wish that you are able to continue on this journey of learning. We encourage you to build upon this knowledge and 
+                find ways to implement what you learn into your own profession, knowing that as machine learning and ai become more and more prevalent in our everyday lives, being prepared for the changes is of essence. May the information provided in these pages serve as a starting point. 
+                <br><br>If you would like to build on our work, feel free to visit our public GitHub repository where you will be able to download the source code for the web scraper, our web app, and even this very website. Additionally, full documentation on all these elements will be available, as well as videos further explaining how they work. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="s1p2">
+        <p style="padding-left: 63px; padding-right: 63px; padding-bottom: 100px;">
+          We do not wish to leave you alone if you choose to continue to learn about these technolgies. To help point you in the right direction, visit our "Guide" page. A link to this page is included the navigation header. In this guide you will be able to find a variety of references that will serve as tools for continuing to expand your knowledge base.
+        </p>
+      </div>
+      
+    </section>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/ca32748111.js"></script>
+    <script src="{{ url_for('static', filename='js/video_background.js') }}"></script>
+    <script src="https://anvil.works/embed.js" async></script>
+
+  </body>
+  <footer class="footer" style="padding-top: 45px;">
+    <div class="row" style="text-align: center;">
+      <div class="col-xs-7 col-md-5 footer__addr" id="col1">
+          <h1 class="footer__logo" style="color: #2f2f2f; text-align: center; padding-bottom: 20px;">ai for all</h1>
+    
+            <ul class="social-icons" style="height: 44px; display: inline-block; text-align: center;">
+              <li id="leftIcon"><a title="Check our our GitHub" class="github" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+              <li><a title="Email us" class="email-us" href="mailto:crami097@fiu.edu"><i class="fa fa-envelope" style="font-size: 22px; padding-top: 11px;"></i></a></li>
+              <li><a title="Visit the GenAi website" class="GenAi" href="https://www.ainexus.org/home"><i class="fas fa-brain" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+            </ul>
+        </div>
+      <div class="col-sm-9">
+        <h3 style="font-size: 24px; text-align: left;">About</h3>
+        <p class="font1">We are a dedicated team of developers who have a passion for machine learning and technologies of the future. Our goal is to help others in their quest for improvement by proving that <b>anyone</b> can learn technologies that at one point they deemed impossible to understand. We hope you join us on this journey and learn a few things along the way.</p>
+      </div>
+
+    </div>
+    
+      <hr>
+
+    <div class="legal">
+      <p style="text-align: left;">A project associated with <a href="https://www.mitre.org/" style="color: #999;"><b>MITRE</b></a> and <a href="https://www.ainexus.org/home" style="color: #999;"><b>Genereration AI</b></a> </p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> by the <span class="footer__logo" style="font-size: 14px;">ai for all </span> team</span>
+      </div>
+    </div>
+  </footer>
+</html>

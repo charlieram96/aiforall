@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ai for all</title>
+  <link rel = "icon" href = "/static/images/logo1.png" type = "image/x-icon"> 
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/fixed.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-dark navbar-expand-md justify-content-between fixed-top" style="background-color: rgba(41, 36, 36, 0.8);">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link pl-0" href="{{ url_for('index')}}" style="font-weight: 400;">Home <span class="sr-only">Home</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pages
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ url_for('scraper_page') }}">Web Scraper</a>
+                <a class="dropdown-item" href="{{ url_for('ml_page') }}">Machine Learning</a>
+                <a class="dropdown-item" href="{{ url_for('product_page') }}">Product</a>
+            </div>
+        </li>
+          <li class="nav-item" style="width: 100px;">
+            <a class="nav-link" href="https://artificial-intelligence.anvil.app" id="dd">Web App</a>
+          </li>
+          <li class="nav-item" style="width: 100px;">
+            <a class="nav-link" href="{{ url_for('guide') }}" id="dd">Guide</a>
+          </li>
+          
+
+        </ul>
+      </div>
+      <a href="{{ url_for('index')}}" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"><img src="/static/images/logo.png" alt=""></a>
+      <div class="navbar-collapse collapse dual-nav w-50 order-2">
+        <ul class="nav navbar-nav ml-auto">
+          <div>
+              <a href="https://github.com/charlieram96/SeniorProject">
+                <span class="ml-auto navbar-text footer__logo1">GitHub</span>
+                <li class="nav-item" style="margin-top: 2px; margin-right: 1px;"><a class="nav-link" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github"></i></a></li>
+              </a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    
+  </nav>
+
+<div id="videoplayer">
+  <div class="video-wrap">
+		<div id="videos">
+		</div>
+	</div>
+</div>
+
+<div class="caption text-center" id="page-wrap">
+	<h1 class="display-3" id="header1">ai for all</h1>
+	<p class="lead" id="text1">As technology rapidly advances, we find ourselves in the midst of the next industrial revolution, one powered by 
+		<b>machine learning</b> and <b>AI</b>. While big businesses have the resources to keep up with these changes, 
+		smaller businesses usually fall behind and as a result, lose profits or <b>go out of business</b>.
+		Our goal is to bring machine learning and ai technologies to smaller businesses and allow the playing field to equal. 
+		</p>
+	<a class="btn btn-outline-light btn-md" href="#plan" id="button1">
+		See our plan
+	</a>
+</div>
+
+  <section>
+    <div class="container" id="plan" style="padding-top: 100px;">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="/static/images/web_scraper.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4" style="font-weight: 350;">A Web Scraper...</h2>
+            <p>Web scraping, also known as web crawling, allows us to recover data
+			 from various websites and store the information in a databse. For this particular project, 
+			 we scraped data from <b>Amazon</b>. The web scraper will look for a product the user specifies 
+			 and collect various information (price, rating, etc.) from that product. This information will 
+			 then be analyzed using machine learning models. </p s>
+			<a class="btn btn-outline-dark btn-sm" href="{{ url_for('scraper_page') }}">Try it yourself</a>
+		</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="/static/images/machine_learning.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+            <h2 class="display-4" style="font-weight: 350;">Some machine learning...</h2>
+            <p>The data we have scraped will be stored in a database. This data, however, is useless by itself. To extract 
+				value from it we must analyze it. To do this, we have developed a machine learning model that allows us to 
+				inspect the data we have collected and find intereting and useful patterns within it. 
+			</p>
+			<a class="btn btn-outline-dark btn-sm" href="{{ url_for('ml_page') }}"">See how it works</a>
+		</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="padding-bottom: 200px;">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="/static/images/a_product.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4" style="font-weight: 350;">And a product</h2>
+            <p>Our goal is to provide a cheap and accessible way for everyone, particularly small businesses, to keep up with
+			   the rapid changes in technology. AI and machine learning are fields that have traditionally been dominated by big businesses.
+			   With this product, however, we will be able to provide <b>ai for all</b>.
+			</p>
+			<a class="btn btn-outline-dark btn-sm" href="{{ url_for('product_page') }}">Experience the results</a>
+		</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--- Script Source Files -->
+<script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/video_background.js') }}"></script>
+<script src="{{ url_for('static', filename='js/smooth_scroll.js') }}"></script>
+<script src="https://use.fontawesome.com/ca32748111.js"></script>
+<!--- End of Script Source Files -->
+</body>
+
+  <footer class="footer" style="padding-top: 45px;">
+    <div class="row" style="text-align: center;">
+      <div class="col-xs-7 col-md-5 footer__addr" id="col1">
+          <h1 class="footer__logo" style="color: #2f2f2f; text-align: center; padding-bottom: 20px;">ai for all</h1>
+    
+            <ul class="social-icons" style="height: 44px; display: inline-block; text-align: center;">
+              <li id="leftIcon"><a title="Check our our GitHub" class="github" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+              <li><a title="Email us" class="email-us" href="mailto:crami097@fiu.edu"><i class="fa fa-envelope" style="font-size: 22px; padding-top: 11px;"></i></a></li>
+              <li><a title="Visit the GenAi website" class="GenAi" href="https://www.ainexus.org/home"><i class="fas fa-brain" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+            </ul>
+        </div>
+      <div class="col-sm-9">
+        <h3 style="font-size: 24px; text-align: left;">About</h3>
+        <p class="font1">We are a dedicated team of developers who have a passion for machine learning and technologies of the future. Our goal is to help others in their quest for improvement by proving that <b>anyone</b> can learn technologies that at one point they deemed impossible to understand. We hope you join us on this journey and learn a few things along the way.</p>
+      </div>
+
+    </div>
+    
+      <hr>
+
+    <div class="legal">
+      <p>A project associated with <a href="https://www.mitre.org/" style="color: #999;"><b>MITRE</b></a> and <a href="https://www.ainexus.org/home" style="color: #999;"><b>Genereration AI</b></a> </p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> by the <span class="footer__logo" style="font-size: 14px;">ai for all </span> team</span>
+      </div>
+    </div>
+  </footer>
+</html>
+

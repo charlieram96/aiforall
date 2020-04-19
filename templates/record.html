@@ -1,0 +1,286 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel = "icon" href = "/static/images/logo1.png" type = "image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/web_scraper_css.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fixed.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+      
+
+    <title>ai for all</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-md justify-content-between fixed-top" style="background-color: rgba(41, 36, 36, 0.8);">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link pl-0" href="{{ url_for('index')}}" style="font-weight: 400;">Home <span class="sr-only">Home</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ url_for('scraper_page') }}">Web Scraper</a>
+                  <a class="dropdown-item" href="{{ url_for('ml_page') }}">Machine Learning</a>
+                  <a class="dropdown-item" href="{{ url_for('product_page') }}">Product</a>
+              </div>
+          </li>
+            <li class="nav-item" style="width: 100px;">
+              <a class="nav-link" href="https://artificial-intelligence.anvil.app" id="dd">Web App</a>
+            </li>
+            <li class="nav-item" style="width: 100px;">
+              <a class="nav-link" href="{{ url_for('guide') }}" id="dd">Guide</a>
+            </li>
+            
+  
+          </ul>
+        </div>
+        <a href="{{ url_for('index')}}" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"><img src="/static/images/logo.png" alt=""></a>
+        <div class="navbar-collapse collapse dual-nav w-50 order-2">
+          <ul class="nav navbar-nav ml-auto">
+            <div>
+              <a href="https://github.com/charlieram96/SeniorProject">
+                <span class="ml-auto navbar-text footer__logo1">GitHub</span>
+                <li class="nav-item" style="margin-top: 2px; margin-right: 1px;"><a class="nav-link" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github"></i></a></li>
+              </a>
+            </div>
+          </ul>
+        </div>
+      </div>
+      
+    </nav> 
+
+    <div id="videoplayer1">
+      <div class="video-wrap">
+        <div id="videos">
+          
+        </div>
+
+      </div>
+    </div>
+
+    <div class="caption text-center" id="paragraph" style="color: white ; padding-bottom: 65px;">
+    <h2 class="display-4" id="header_ws" style="text-align: center; padding-top: 70px;">Acquiring Our Data</h2>
+    <p class="lead" id="text_ws" style="padding-left: 9%; padding-right: 9%; padding-top: 10px; padding-bottom: 20px ; margin: 0px;">In the world we live in today, data is very valuable. Big companies such as Google, Amazon, and Facebook make much of their income from analyzing or even selling data that they acquire from 
+      people that use their products and surf their sites. This acquired data provides valuable information; what interests people have, what their purchasing habits are like, what items they are looking to purchase, etc.
+      <i>Acquiring data</i>, therefore, is a task of great value. If we are able to extract data from websites and analyze the information this data provides, we will have a powerful product in our hands. To begin with, we will extract data from Amazon, 
+      the worlds largest online retailer and therefore a great place to find valuable information from a multitude of products as well as countless customer feedback. However, extracting this data manually will without doubt be a monumetal task. Luckily, 
+      there are ways in which we can automate this data-extraction process and store our information in a secure database.   </p>
+      <a class="btn btn-outline-light btn-md" href="#ws" id="button2">
+        How?
+      </a>
+    </div>
+    
+    <section style="background-color: #cccaca; padding-bottom: 10px; padding-top: 75px;">
+      <div class="container" id="ws">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1" style="text-align: center;">
+              <!---use bigger pic ATLEAST 540 x 540 px--->
+              <img class="img-fluid rounded" src="https://media.giphy.com/media/HUplkVCPY7jTW/giphy.gif" style="height: 500px;" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h3 class="display-4" style="font-weight: 350;">How we did it</h3>
+              <p style="text-align: justify;">The process of data collection is one that can become very complex if not scaled properly. Since we have the goal
+                of allowing data collection and processing to be a manageable task for every company, regardless of size, we must 
+                be able to provide a service that is able to do so. We want to be able to collect product information from an online retailer and
+                store it in a database where we will be able to extract it later for analysis. <br><br><i>How can we do this?</i> The answer to this question is 
+                <b>web scraping.</b> Web scraping is the process of retrieving data from a website. You might ask yourself: "I can collect data from a website myself, why do
+                I need a web scraper?" The answer to that question lies in the fact that a web scraper allows us to <i>automate</i> this process. By automating the data collection 
+                process, we are able to scale our application in a way we would not be able to if we were collecting data manually.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: rgb(224, 224, 224); padding-bottom: 10px; padding-top: 75px;">
+      <div class="container" id="ws2">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-0" style="text-align: center;">
+              <img class="img-fluid rounded" src="https://media.giphy.com/media/6ZJmxcWks8Zva/giphy.gif" alt="" style="height: 450px;">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5" style="padding-bottom: 10px !important;">
+              <h3 class="display-4" style="font-weight: 350;">The benefits of using a web scraper</h3>
+              <p style="text-align: justify;">We use web scraping for a variety of reasons. For one, web scraping is a process of automating the extraction of data in an efficient and fast way. Through a web scraper, we can extract data from any website, regardless of the size of that data, and store it safely.
+                Additionally, websites may have data that is not able to be copied and pasted the way we normally do when manually extracting information from a website. However, with a web scraper, this is no issue.
+                Another reason we use a web scraper is because of its <i>flexibility.</i> Web scraping allows us to extract information in our format of choice, whether it be a <a href="https://www.w3schools.com/whatis/whatis_json.asp">JSON</a> 
+                file, a <a href="https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/">csv</a> file, or many others.</p> 
+            </div>
+          </div>
+        </div>
+          <div class="parrPad">
+            <p style="text-align: justify; padding-left: 15px; padding-right: 15px; padding-bottom: 60px;">For the purposes of fulfilling the goals we have with this product, a web scraper makes perfect sense. We want to collect vast amounts of data in a way that is efficient and accurate. 
+              Due to the fact that Amazon is such a large online retailer filled with an immense variety of products and information, we have decided to scrape our data from Amazon. However, the power of web scraping comes from the fact that 
+              it is so flexible and allows for data collection from any website. How can this be? What is happening on the back end that allows a web scraper to do what it does?</p>
+          </div>
+      </div>
+    </section>
+
+    <section style="background-color: rgb(245, 245, 245); padding-bottom: 10px; padding-top: 75px;">
+      <div class="container" id="ws3">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1" style="text-align: center;">
+              <img class="img-fluid rounded" src="https://media.giphy.com/media/Su1UWQeZ2w1VK/giphy.gif" style="height: 500px;">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5" style="padding-bottom: 5px;">
+              <h3 class="display-4" style="font-weight: 350;">How does it work?</h3>
+              <p style="text-align: justify;">The basics of a web scraper are relatively simple to understand. The first thing we must understand is that the "language of the web" is Hypertext Markup Language, or <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>. HTML is the standard markup language for web pages, which are composed of building blocks called <i>HTML elements</i>. In turn, HTML elements are represented by <> tags.
+              Every part of this webpage you are seeing now, from these words to the header above to the images you see are all built using HTML tags. These tags have, in most cases, what we call <a href="https://www.w3schools.com/html/html_classes.asp">classess</a> and <a href="https://www.w3schools.com/html/html_id.asp">id's</a>. These classes and id's can be used to identify HTML elements, such as the <i>name, price, and rating</i> of an Amazon product. 
+              If you want to learn more about the structure of HTML elements and how webpages work in general, <a href="https://www.w3schools.com/whatis/whatis_html.asp">this</a> resource is a very helpful tool. 
+              <br><br>To be able to understand how web scraping works, we also have to understand it's components. In essence, web scraping works by way of two parts: a <b>web crawler</b> and a <b>web scraper</b>. </p>
+            </div>
+          </div>
+        </div>
+          <div class="parrPad2">
+            <h3 class="display-7" style="font-weight: 500; font-size: 25px; padding-top: 10px;">Web Crawler</h3>
+            <p style="text-align: justify;">A <i>web crawler</i>, which is generally called a "spider", is an <i>ai</i> that is browses the internet and searches for content by following links and exploring. Usually, this is done using <a href="https://www.techopedia.com/definition/7705/indexing">indexing</a>. The spider will visit all the specified pages of a website and find links to get the required data. In our case, the spider visits the Amazon homepage and searches for a term specified by the user. It then looks for all the links to products that it can find. 
+            If you want to check out the way we coded our spider, feel free to visit our GitHub repository. A link to this repository can be found <a href="https://github.com/charlieram96/seniorproject_web_scraper">here</a> as well as in the button down bellow. The spider was coded using Python and the file can be found following this path: <i>ws_seniorproject -> ws_seniorproject -> spiders -> <b>testfile.py</b></i> </p>
+            <br>
+            <h3 class="display-7" id="web_scraper_header" style="font-weight: 500; font-size: 25px; padding-top: 10px;">Web Scraper</h3>
+            <p style="text-align: justify;">A <i>web scraper</i>, on the other hand, is a tool that is designed to accurately extract data from a webpage. Web scrapers automate the data extraction process, allowing for rapid extraction of data from a website. This is done by specifying which HTML elements we want the scraper to extract. For example, if we wanted the scraper to extract the heading above this paragraph, we would tell it to look for the unique HTML element combination of tag "h3" and id "web_scraper_header". 
+            This is because our header tag looks like this: <br><br>&lth3 class="display-7" id="web_scraper_header" style="font-weight: 500; font-size: 25px; padding-top: 10px;"&gtWeb Scraper&lth3&gt<br><br>
+            While this may seem confusing at first, acquiring a basic understanding of how HTML elements are declared will allow you to follow along with our code and even make changes of your own. 
+            </p>
+            <p style="text-align: justify;">Feel free to visit our GitHub repository where you'll be able to find our code. Additionally, feel free to clone or download the repository and check out the scraper on your own computer. 
+            Follow the steps laid out in the "readme" file to download the dependencies and run the scraper. For this project, we used the web crawling framework known as <i>Scrapy</i>. If you want to know more about this framework and how it facilitates the web scraping process, visit <a href="https://docs.scrapy.org/en/latest/">this</a> link. <br><br> In the following section you will be able to see some of the datasets we scraped using our custom web scraper.
+            </p>
+            <a class="btn btn-outline-dark btn-sm" href="https://github.com/charlieram96/seniorproject_web_scraper">Check out our code on GitHub</a>
+            <br><br>
+            <p id="tryit" style="background-color: rgb(245, 245, 245); text-align: justify; text-justify: inter-word; padding-top: 30px; padding-bottom: 0px; margin-bottom: 0px;"><b>Use the follwing dropdown option</b> to select one of our already scraped datasets. These have all been collected from <b>Amazon</b> using our custom web scraper. Once we have collected datasets such as the ones you can choose here, we will be able to 
+              analyze them and extract patterns using our machine learning and ai models. For now, you are free to inspect the data yourself. The products selected here are not biased; we simply ran our scraper and input shoes/pants/shirts/hats and this is what it returned. 
+              One of the things you might notice is that the scraper returned around 15-20 products. This was done intentionally as we did not want to overload the user; we simply wanted to offer a preview of the scraper's functionality. Also, the attributes you will see (price, rating, etc.) are not the complete list of attributes our finished scraper includes. The reason 
+              for not including all the attributes is the same reason as before: we did not want to overload the user, only offer a preview of the scraper's functionality.</p>
+          </div>
+      </div>
+    </section>
+
+    <div class="form" style="padding-top: 10px; display: block; text-align: center; background-color: rgb(245, 245, 245);">
+      <form class="form-inline md-form mr-auto mb-4" id="form1" action="" method="POST" enctype="multipart/form-data" style="padding-left: 2rem; padding-right: 2rem; display: inline-block; margin-left: -25%; text-align: left;">
+        <div class = select-box>  
+          <select id="mySelect" name = "dataset" style="padding: .2rem; font-size: .93rem ;width: 200px; border: 0 none; height: 40px; background: #adadad; color: #ffffff;">
+            <option value="Blank">Select...</option> 
+            <option value="Shoes">Shoes</option>
+            <option value="Pants">Pants</option>
+            <option value="Shirts">Shirts</option>
+            <option value="Hats">Hats</option>
+          </select>
+          <button class="btn btn-dark btn-sm" type="submit" value="Submit" style="color: rgb(255, 255, 255) ; height: 40px; width: 100px ; margin-left: 15px; position: absolute;">Submit</button>
+        </div>
+          <!---<input type="submit" value="Submit">--->
+      </form>
+    </div>
+    
+    <div id="scrollDown">
+      {% if scroll %}
+      <script>
+          //document.getElementById('{{ scroll }}').scrollIntoView();
+          document.location.hash = '#' + '{{ scroll }}';
+      </script>
+      {% endif %}
+    </div>
+    
+    <div id="result" style="padding-bottom: 10px; background-color: rgb(214, 214, 214);" >
+      {% if product is defined %}
+      <h2 class="display-4" style="font-weight: 350; text-align: center; padding-top: 30px; padding-bottom: 20px;">{{product}}</h2>
+      {% endif %}
+    </div>
+    
+
+    <table class="table table-striped table-responsive" style="padding-left: 2rem; padding-right: 2rem; background-color: rgb(214, 214, 214); margin-bottom: 0px;">
+        <thead class="thead-dark">
+            <tr>
+                {% for col in colnames %}
+                <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead=>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                {% for col in colnames %}
+                <td>{{ record[col] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <section style=" background-color: rgb(214, 214, 214);; color: rgb(68, 68, 68);">
+      <div class="container" style="padding-top: 10px; padding-bottom: 180px;">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1" style="text-align: center;">
+              <img class="img-fluid rounded" id="f_img" src="https://media.giphy.com/media/YOZ7AwCMgNCnqBooAH/giphy.gif" alt="" style="height: 400px;">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4" style="font-weight: 350;">On to the next...</h2>
+              <p style="text-align: justify;">Now that we have a clearer understanding of how we collect our data, it is time to understand how we will analyze it. Machine learning and ai is an enourmous and relatively complex field filled with algortihms and problems that 
+              the data science world has as of yet fully mastered. We hope to bring you a better understanding of what machine learning actually is, why it is useful today, and why we believe it is the centerpoint of the next industrial revolution, one we are already living.
+              </p>
+        <a class="btn btn-outline-dark btn-sm" href="{{ url_for('ml_page') }}">Follow along</a>
+        
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/video_background.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ss.js') }}"></script>
+    <script src="https://use.fontawesome.com/ca32748111.js"></script>
+
+  </body>
+  <footer class="footer" style="padding-top: 45px;">
+    <div class="row" style="text-align: center;">
+      <div class="col-xs-7 col-md-5 footer__addr" id="col1">
+          <h1 class="footer__logo" style="color: #ffffff; text-align: center; padding-bottom: 20px;">ai for all</h1>
+    
+            <ul class="social-icons" style="height: 44px; display: inline-block; text-align: center;">
+              <li id="leftIcon"><a title="Check our our GitHub" class="github" href="https://github.com/charlieram96/SeniorProject"><i class="fa fa-github" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+              <li><a title="Email us" class="email-us" href="mailto:crami097@fiu.edu"><i class="fa fa-envelope" style="font-size: 22px; padding-top: 11px;"></i></a></li>
+              <li><a title="Visit the GenAi website" class="GenAi" href="https://www.ainexus.org/home"><i class="fas fa-brain" style="font-size: 24px; padding-top: 11px;"></i></a></li>
+            </ul>
+        </div>
+      <div class="col-sm-9">
+        <h3 style="font-size: 24px; text-align: left; color: #ffffff;">About</h3>
+         <p class="font1">We are a dedicated team of developers who have a passion for machine learning and technologies of the future. Our goal is to help others in their quest for improvement by proving that <b>anyone</b> can learn technologies that at one point they deemed impossible to understand. We hope you join us on this journey and learn a few things along the way.</p>
+      </div>
+  
+    </div>
+    
+      <hr color="#737373">
+  
+    <div class="legal">
+      <p style="text-align: left;">A project associated with <a href="https://www.mitre.org/" style="color: #999;"><b>MITRE</b></a> and <a href="https://www.ainexus.org/home" style="color: #999;"><b>Genereration AI</b></a> </p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> by the <span class="footer__logo" style="font-size: 14px;">ai for all </span> team</span>
+      </div>
+    </div>
+  </footer>
+</html>
